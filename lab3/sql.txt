@@ -1,0 +1,6 @@
+SELECT * FROM student;
+INSERT INTO student VALUES(1);
+UPDATE student SET age=value1;
+CREATE DATABASE databasename;
+DROP DATABASE databasename;
+ALTER TABLE student ADD age int;
