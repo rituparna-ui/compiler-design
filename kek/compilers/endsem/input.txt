@@ -1,0 +1,4 @@
+co(simple(regular(50,4)
+(co(co(co(34,55)))
+
+R= regular(?R,?R)|

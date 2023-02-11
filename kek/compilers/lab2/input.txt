@@ -1,0 +1,4 @@
+mala # y #Reverse ( mala)
+ma#la#y#Reverse ( mala)
+Mala#Y*Reverse(mala)
+Reverse(Reverse(mala))

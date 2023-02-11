@@ -1,0 +1,201 @@
+while(sub.find(non_term)<sub.length()){
+                    int index_nt=sub.find(non_term);
+                    if(sub[index_nt+1]=='^'){
+                        index_nt++;
+                        
+                    }
+                    sub=sub.substr(index_nt+1,sub.length());
+                    cout<<sub;
+                    vector<char> res;
+                    if(sub.length()!=0){
+                        //res=first(sub,rules);
+                         if(find(res.begin(),res.end(),'#')!=res.end()){
+                           
+                            remove(res.begin(),res.end(),'#');
+                            vector<char> ansNew;//=follow(cur.first,rules);
+                            vector<char> newList;
+                            if(ansNew.size()>0){
+                                
+                                
+                                res.insert(res.end(),ansNew.begin(),ansNew.end());
+                                newList=res;
+                                
+                                res=newList;
+                            }else{
+                                newList=res;
+                            }
+
+                            res=newList;
+
+
+                            
+                        }
+                    }
+                    else{
+                            if(non_term!=cur.first){
+                                res=follow(cur.first,rules);
+                                //cout<<cur.first;
+                            }
+                    }
+
+                    if(res.size()>0){
+                        for(auto g:res){
+                            solset.push_back(g);
+                        }
+                    }
+                    
+                }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+for(auto cur:rules){
+        vector<string> rhs=rules[cur.first];
+        //cout<<cur.first<<"=>";
+        for(auto sub:rhs){
+            
+            if(sub.find(non_term)<sub.length() && sub[sub.find(sub[non_term.length()-1])+1]!='^' ){
+                cout<<sub;
+                while(sub.find(non_term)<sub.length() && sub[sub.find(sub[non_term.length()-1])+1]!='^' ){
+                    int index_nt=sub.find(non_term);
+                    cout<<index_nt;
+                    if(sub[index_nt+1]=='^'){
+                        index_nt++;
+                        
+                    }
+                    sub=sub.substr(index_nt+1,sub.length());
+                    //cout<<sub<<"\n";
+                    vector<char> res;
+                    if(sub.length()!=0){
+                        //res=first(sub,rules);
+                        if(find(term_userdef.begin(),term_userdef.end(),sub)!=term_userdef.end()){
+                            res.push_back(sub[0]);
+                        }else{
+                            unordered_set<char> temp =firsts[sub];
+                            for(auto i:temp){
+                                res.push_back(i);
+                            }
+                        }
+                        
+                        for(auto i:res){
+                            //res.push_back(i);
+                            cout<<i;
+                        }
+                        if(find(res.begin(),res.end(),'#')!=res.end()){
+                            
+                           
+                            remove(res.begin(),res.end(),'#');
+                            vector<char> ansNew=follow(cur.first,rules);
+                            
+                            for(auto i:ansNew){
+                                cout<<i;
+                            }
+                            vector<char> newList;
+                            if(ansNew.size()>0){
+                                
+                                
+                                res.insert(res.end(),ansNew.begin(),ansNew.end());
+                                newList=res;
+                                
+                                res=newList;
+                            }else{
+                                newList=res;
+                            }
+
+                            res=newList;
+
+
+                            
+                        }
+                       
+                        
+                    }
+                    else{
+                            if(non_term!=cur.first){
+                                res=follow(cur.first,rules);
+                                //cout<<cur.first;
+                            }
+                    }
+                    
+
+                    if(res.size()>0){
+                        for(auto g:res){
+                            //cout<<g;
+                            solset.push_back(g);
+                        }
+                    }
+                    
+                }
+                
+            }
+            
+        }
+        //cout<<"\n";
+
+        
+        
+    }
+
+
+
+
+
+
+
+    for(auto lhs: rules){
+        vector<string> rhs = rules[lhs.first];
+        for(auto y: rhs){
+            vector<char> res = first(y);
+            if(find(res.begin(),res.end(),'#')!=res.end()){
+                if(){
+                    vector<char> firstFollow;
+                    vector<char> fol_op = follows[lhs];
+                    if()
+                        firstFollow.push_back(fol_op)
+                    else{
+                        for(auto u: fol_op)
+                            firstFollow.push_back(u);
+                    }
+                    res = firstFollow;
+                }
+                else{
+                    remove(res.begin(),res.end(),'#')
+                    //res = res + follows[lhs];
+                    for (auto i:follows[lhs]){
+                        res.push_back(i);
+                    }
+                }
+                vector<char> ttemp;
+                /*if (typeif(res).name() = "string"){
+                    ttemp.push_back(res);
+                    res = ttemp;
+                }*/
+                for(auto c: res){
+                    int xnt = ntlist.find(lhs), yt = terminals.find(c);
+                    if(mat[xnt][yt] == ' '){
+                        mat[xnt][yt] = mat[xnt][yt] + .f",{lhs}->{y}";
+                    }
+                    else{
+                        if()
+                            continue;
+                        else{
+                            grammar_is_LL = false;
+                            mat[xnt][yt] = mat[xnt][yt] + .f",{lhs}->{y}";
+                        }
+                    }
+                }
+            }
+        }
+    }

@@ -1,0 +1,23 @@
+cat file1.txt file2.txt >> file4.txt
+
+tr -d '\n' < file1.txt  /* -d means delete characters */
+
+sed 's/[0-9&*$@]//g' file1.txt
+
+sed 's/.\([0-9][0-9]\)//' file2.txt
+
+tr ' ' '\n'< file1.txt | sort | uniq -c
+
+tr ' ' '\n'< file1.txt | sort | uniq -c | sort -nr /*sort in order of decreading frequency*/
+
+ sed -e 's/ //g' -e 's/./\n&/2g' < file1.txt| sort |uniq > file5.txt
+
+/* -e is used to replace different patterns in sed
+ 
+ /. represents ebery character of input 
+  \n represents every character should be changed to new line 
+  /2 indicates after 2nd subpattern because we don't want to add new line before first character of word
+ 
+*/
+
+sed -e 's/ //g' -e 's/./\n&/2g' < file1.txt| sort |uniq -c |sort -nr > file6.txt

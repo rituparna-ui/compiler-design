@@ -23,6 +23,8 @@ int valid=1;
 . { 
   valid = 0;
 }
+
+
  
 %%
 int main() {
