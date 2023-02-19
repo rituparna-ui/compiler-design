@@ -1,0 +1,14 @@
+{
+  "files.associations": {
+    "*.ejs": "html",
+    "*.js": "javascript",
+    "*.tcc": "c",
+    "condition_variable": "c",
+    "list": "c",
+    "future": "c",
+    "string_view": "c",
+    "type_traits": "c",
+    "variant": "c",
+    "*.inc": "c"
+  }
+}
