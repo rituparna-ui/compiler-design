@@ -87,7 +87,8 @@ bool areBracketsBalanced(char exp[])
 
 int main()
 {
-  char exp[100] = "1+2+{3*5-(4()}";
+  // char exp[100] = "1+2+{3*5-(4()}";
+  char exp[100] = "a+(b+c+)";
   if (areBracketsBalanced(exp))
     printf("Balanced \n");
   else

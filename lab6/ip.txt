@@ -1,0 +1,6 @@
+SELECT * FROM users
+SELECT * FROM users WHERE name=ritu
+UPDATE users SET VALUES WHERE name=ritu
+DROP DATABASE ritu
+CREATE DATABASE ritu
+DROP TABLE users
