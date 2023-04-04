@@ -1,0 +1,24 @@
+show salary of employees.
+show salary and name of employees.
+give all details of employees.
+give only age of employees.
+give only age of employees whose salary is greater than 100.
+give the name of employees whose age is smaller than 35.
+remove employees whose age is greater than 50.
+give only age and name of employees whose salary is 100.
+give all details of employees whose name is "Ritu".
+update the employee age to 50 whose salary is greater than or equal to 10.
+update the employee age to 50 whose salary is greater than 10.
+
+
+
+(14,500,'Z'),
+(13, 50,'Y'),
+(25,2500,'X'),
+(50,6000,'W'),
+(40, 101,'M'),
+(14,5000,'U'),
+(18, 600,'Q'),
+(25,2500,'E'),
+(50,6000,'T'),
+(40, 1010,'H');

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Table</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Input Query: <%= input %></h2>
+    <h2>Output Query: <%= output %></h2>
+    <% if (rows.length==0) { %>
+    <h1>No results</h1>
+    <% } else { %>
+    <div>
+      <table>
+        <tr>
+          <% for( let index = 0; index < rows.length; index++ ) { %>
+          <th><%= rows[index] %></th>
+          <% } %>
+        </tr>
+        <% for( let index = 0; index < data.length; index++ ) { %>
+        <tr>
+          <% for( let j = 0; j < rows.length; j++ ) { %>
+          <td><%= data[index][rows[j]] %></td>
+          <% } %>
+        </tr>
+        <% } %>
+      </table>
+    </div>
+    <% } %>
+  </body>
+</html>
